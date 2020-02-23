@@ -20,6 +20,7 @@ class CreateMembersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->longText('address')->nullable();
+            $table->string('password');
             $table->timestamps();
         });
     }
