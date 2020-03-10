@@ -21,4 +21,8 @@ class Author extends Model
     public function setNameAttribute($value) {
         $this->attributes['name'] = trim(ucwords($value));
     }
+
+    public function books() {
+        return $this->belongsToMany(Book::class);
+    }
 }

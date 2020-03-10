@@ -59,4 +59,8 @@ class Member extends Model
     public function getEmailAttribute($value) {
         return strtolower($value);
     }
+
+    public function books() {
+        return $this->belongsToMany(Book::class);
+    }
 }
