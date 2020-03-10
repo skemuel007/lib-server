@@ -7,4 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     //
+    protected $fillable = [
+        'title',
+        'category_id'
+    ];
+
+    protected $guarded = [
+        'id',
+        'created_at',
+        'updated_at'
+    ];
+
+    /**
+     * Book belongs to category
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

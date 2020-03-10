@@ -18,4 +18,12 @@ class Category extends Model
         'created_at',
         'updated_at',
     ];
+
+    /**
+     * Category has many books
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function books() {
+        return $this->hasMany(Book::class);
+    }
 }
