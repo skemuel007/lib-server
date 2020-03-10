@@ -9,7 +9,9 @@ class Book extends Model
     //
     protected $fillable = [
         'title',
-        'category_id'
+        'category_id',
+        'shelf',
+        'number_copies'
     ];
 
     protected $guarded = [

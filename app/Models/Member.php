@@ -63,4 +63,8 @@ class Member extends Model
     public function books() {
         return $this->belongsToMany(Book::class);
     }
+
+    public function bills() {
+        return $this->hasMany(Bill::class);
+    }
 }
